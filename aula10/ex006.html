@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eventos DOM</title>
+    <style>
+      div#doces {
+        background: pink;
+        color: black;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="doces">Interaja...</div>
+
+    <script>
+      var doces = window.document.getElementById("doces");
+      doces.addEventListener("click", clicar);
+      doces.addEventListener("mouseenter", entrar);
+      doces.addEventListener("mouseout", sair);
+      function clicar() {
+        var doces = ndow.document.getElementById("doces");
+        doces.innerText = "clicou";
+      }
+      function entrar() {
+        doces.innerText = "entrou";
+        doces.style.background = "red";
+      }
+      function sair() {
+        doces.innerText = "sair";
+        doces.style.background = "blue";
+      }
+    </script>
+  </body>
+</html>

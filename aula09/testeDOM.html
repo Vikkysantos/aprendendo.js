@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Dom</title>
+    <style>
+      body {
+        background: rgb(94, 170, 94);
+        color: bisque;
+        font: 30px "Times New Roman", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>aprendendo DOM</h1>
+    <p>clique aqui</p>
+    <p>utilizando <strong> DOM </strong> em javascript</p>
+    <p>seja bem vindo a minha página web</p>
+    <div id="resposta"></div>
+    <script>
+      var p1 = document.querySelectorAll("p");
+      var resultado = document.getElementById("resposta");
+      for (var i = 0; i < p1.length; i++) {
+        resultado.innerHTML += "<p>Oi, tudo bem? " + p1[i].innerHTML + "</p>";
+      }
+    </script>
+  </body>
+</html>
