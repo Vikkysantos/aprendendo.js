@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacionalidade</title>
+  </head>
+  <body>
+    <h1>identificação de nacionalidade</h1>
+    País de origem <input type="text" name="nation" id="nation" />
+    <input type="button" value="identificação!" onclick="indentificar()" />
+    <div id="res"></div>
+    <script>
+      function indentificar() {
+        var indentificar = window.document.querySelector(`input#nation`);
+        var res = window.document.querySelector(`#res`);
+        var txt = indentificar.value;
+        res.innerHTML += `<p> voce é do  ${txt}</p>`;
+        if (txt === "brasil") {
+          res.innerHTML += `a sua nacionalidade é brasileira`;
+        } else {
+          res.innerHTML += `estrangeiro`;
+        }
+      }
+    </script>
+  </body>
+</html>
